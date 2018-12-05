@@ -51,7 +51,7 @@ class FormController extends Controller
         $validated = $request->validated();
         $this->model->fill($validated);
         $this->model->save();
-        Mail::to('93152f80a0-63b7a3@inbox.mailtrap.io')->send(new NewMessage());
+        Mail::to(Form::getSender())->send(new NewMessage());
         Mail::to(Owner::getAll())->send(new MessageReceived());
         return redirect('/');
     }

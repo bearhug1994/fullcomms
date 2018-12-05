@@ -5,7 +5,7 @@
         <div class="card card-pad">
             <div class="card-header">Invoice Details</div>
             <div class="card-body">
-                {!! Form::open(['url' => url('/form'), 'class' => 'md-form']) !!}
+                {!! Form::open(['url' => url('/messages'), 'class' => 'md-form']) !!}
                 <table class="table table-hover">
                     <tr>
                         <th>Name</th>
@@ -55,7 +55,6 @@
                     </tr>
                 </table>
                 <input type="submit" class="btn btn-success" value="Save" style="margin: 5px">
-                <a href="{{url('form')}}" class="btn btn-danger" style="margin: 5px">Cancel</a>
                 {!! Form::close() !!}
             </div>
         </div>

@@ -23,4 +23,8 @@ class Form extends Model
     public static function getRecent() {
         return self::all()->sortByDesc('created_at')->take('1');
     }
+
+    public static function getSender() {
+        return self::all('email')->sortByDesc('created_at')->take('1');
+    }
 }
